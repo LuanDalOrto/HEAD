@@ -32,7 +32,7 @@ install_ros() {
 #    wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
     sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
     sudo apt-get -y update
-    sudo apt-get -y install ros-indigo-base
+    sudo apt-get -y install ros-indigo-ros-base
     sudo apt-get -y install ros-indigo-tf
     sudo apt-get -y install ros-indigo-driver-common
     sudo apt-get -y install ros-indigo-cv-bridge
@@ -48,7 +48,7 @@ install_ros() {
     # for camera calibration
     sudo apt-get -y install ros-indigo-image-proc
     # for blender to find ros packages
-    sudo pip3 install rospkg catkin_pkg
+    # sudo pip3 install rospkg catkin_pkg
     set +e
     sudo rosdep init
     rosdep update
